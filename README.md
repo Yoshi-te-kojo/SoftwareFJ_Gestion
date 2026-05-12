@@ -3,6 +3,8 @@
 El presente trabajo desarrolla un Sistema Integral de Gestión de Clientes, Servicios y Reservas para la empresa Software FJ, como requisito del Ejercicio 1 de la Fase 4 de la asignatura Programación (213023) de la Universidad Nacional Abierta y a Distancia (UNAD).
 El sistema fue implementado utilizando Programación Orientada a Objetos (POO) en Python, aplicando de manera rigurosa los principios de abstracción, herencia, polimorfismo, encapsulación y sobrecarga de métodos. Se incorporó un robusto manejo de excepciones personalizadas y registro de eventos en archivos de logs, sin hacer uso de bases de datos, cumpliendo estrictamente con las especificaciones del enunciado.
 
+---
+
 **Asignatura:** Programación (213023)  
 **Universidad:** Universidad Nacional Abierta y a Distancia (UNAD)  
 **Fase 4 - Ejercicio 1**
