@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from models.excepciones import ParametroInvalido
 
 class Servicio(ABC):
+    """Clase Abstracta"""
     def __init__(self, id_servicio: str, nombre: str, precio_base: float):
         self._id_servicio = id_servicio
         self._nombre = nombre
@@ -13,7 +14,8 @@ class Servicio(ABC):
             raise ParametroInvalido("El precio base debe ser mayor a 0")
 
     @abstractmethod
-    def calcular_costo(self, duracion: float = None, **kwargs) -> float:
+    def calcular_costo(self, duracion: float = 1.0, **kwargs) -> float:
+        """Método polimórfico"""
         pass
 
     @abstractmethod
@@ -36,7 +38,7 @@ class ReservaSala(Servicio):
         return round(costo, 2)
 
     def descripcion(self) -> str:
-        return f"Reserva de Sala '{self._nombre}'"
+        return f"Reserva de Sala '{self._nombre}' (Cap: {self.capacidad})"
 
 
 class AlquilerEquipo(Servicio):
@@ -59,7 +61,9 @@ class AsesoriaEspecializada(Servicio):
 
     def calcular_costo(self, duracion: float = 1.0, **kwargs) -> float:
         costo = self._precio_base * duracion
+        if kwargs.get("con_informe", False):
+            costo += 150000
         return round(costo, 2)
 
     def descripcion(self) -> str:
-        return f"Asesoría especializada con {self.experto}"
+        return f"Asesoría con {self.experto}"
