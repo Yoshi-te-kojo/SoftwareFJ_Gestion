@@ -37,3 +37,9 @@ Desarrollar un sistema robusto utilizando POO sin base de datos.
 - Manejo avanzado de excepciones
 - Archivo de logs
 - Simulación de operaciones válidas e inválidas
+
+---
+
+## Conclusión
+La implementación de este sistema permitió demostrar la correcta aplicación de los conceptos fundamentales de la Programación Orientada a Objetos y el manejo avanzado de excepciones en Python. El proyecto resultante es estable, modular y extensible, logrando mantener su funcionamiento incluso ante errores deliberados, tal como se solicitaba.
+Este desarrollo fortalece las competencias en diseño de software orientado a objetos y buenas prácticas de programación.
