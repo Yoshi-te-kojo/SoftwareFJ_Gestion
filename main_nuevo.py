@@ -11,40 +11,49 @@ def main():
     servicios = []
     reservas = []
 
-    print("\n🚀 Iniciando Sistema de Gestión Software FJ...\n")
+    print("\n🚀 SISTEMA DE GESTIÓN SOFTWARE FJ\n")
 
     try:
-        # Pruebas de Cliente
+        # 1. Cliente válido
         c1 = Cliente("C001", "Juan Pérez", "juan.perez@email.com", "3001234567")
         clientes.append(c1)
-        log_event(f"✅ Cliente registrado: {c1}")
+        log_event(f"Cliente registrado: {c1}")
 
-        # Prueba de error esperado
+        # 2. Prueba de excepción (cliente inválido)
         try:
-            Cliente("XX", "Ana", "anaemail.com", "123")
+            Cliente("C2", "Ana", "anaemail.com", "123")
         except ClienteInvalido as e:
-            log_event(f"❌ Error controlado (esperado): {e}", "error")
+            log_event(str(e), "error")
 
-        # Servicios
-        s1 = ReservaSala("S001", "Sala Creativa", 45000, 12)
+        # 3. Servicios
+        s1 = ReservaSala("S001", "Sala Creativa", 45000, 15)
         s2 = AlquilerEquipo("S002", "Laptop Dell", 85000, "Portátil")
         s3 = AsesoriaEspecializada("S003", "Consultoría IA", 120000, "Dr. Martínez")
         servicios.extend([s1, s2, s3])
+        log_event("3 Servicios creados correctamente")
 
-        # Reservas
-        r1 = Reserva("R001", c1, s1, 5)
+        # 4. Reservas
+        r1 = Reserva("R001", c1, s1, 8)
         r1.confirmar(es_fin_de_semana=True)
         reservas.append(r1)
 
-        print("\n" + "="*50)
-        print("✅ SISTEMA EJECUTADO CORRECTAMENTE")
-        print(f"Clientes: {len(clientes)} | Servicios: {len(servicios)} | Reservas: {len(reservas)}")
-        print("="*50)
+        r2 = Reserva("R002", c1, s2, 24)
+        r2.confirmar(cantidad=1)
+        reservas.append(r2)
+
+        # Resumen final
+        print("\n" + "="*60)
+        print("RESUMEN FINAL")
+        print("="*60)
+        print(f"Clientes: {len(clientes)}")
+        print(f"Servicios: {len(servicios)}")
+        print(f"Reservas: {len(reservas)}")
+        print("="*60)
 
     except Exception as e:
-        log_event(f"❌ Error crítico: {e}", "error")
+        log_event(f"Error crítico: {e}", "error")
     finally:
-        log_event("=== FIN DE EJECUCIÓN ===")
+        log_event("=== FIN DEL SISTEMA ===")
 
 if __name__ == "__main__":
     main()
