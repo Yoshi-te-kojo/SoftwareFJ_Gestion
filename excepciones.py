@@ -12,3 +12,24 @@ class ErrorValidacion(ErrorSoftwareFJ):
 class ErrorReserva(ErrorSoftwareFJ):
     """Error específico en operaciones de reserva."""
     pass
+    
+class ClienteExistenteError(ErrorValidacion):
+    """El cliente ya se encuentra registrado."""
+    pass
+
+class DatosInvalidosError(ErrorValidacion):
+    """Los datos ingresados son inválidos."""
+    pass
+
+class ServicioNoDisponibleError(ErrorReserva):
+    """El servicio solicitado no está disponible."""
+    pass
+
+class ReservaNoEncontradaError(ErrorReserva):
+    """La reserva solicitada no existe."""
+    pass
+
+
+class HabitacionOcupadaError(ErrorReserva):
+    """La habitación ya está ocupada."""
+    pass
