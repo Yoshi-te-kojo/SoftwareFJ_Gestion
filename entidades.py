@@ -23,22 +23,18 @@ class Cliente:
     def __str__(self):
         return f"Cliente[{self.__id}]: {self.__nombre}"
 
-#Clase abstracta para servicios
-class Servicio(ABC):
-   # --- CLASE ABSTRACTA PARA SERVICIOS ---
 class Servicio(ABC):
     def _init_(self, id_servicio, cliente):
         self.id_servicio = id_servicio
-        self.cliente = cliente # Aquí pasamos el objeto Cliente que ya tienes
+        self.cliente = cliente
 
     @abstractmethod
     def calcular_costo(self):
-        """Método que será diferente para cada tipo de servicio (Polimorfismo)"""
+        """Método abstracto para polimorfismo"""
         pass
 
     def _str_(self):
         return f"Servicio {self.id_servicio} - Cliente: {self.cliente.nombre}"
-
 # --- CLASES HIJAS (IMPLEMENTACIÓN) ---
 
 class ReservaSala(Servicio):
@@ -73,3 +69,15 @@ class Asesoria(Servicio):
 
     def _str_(self):
         return f"Asesoría {self.tipo} para {self.cliente.nombre}"
+#class Servicio(ABC):
+    def _init_(self, id_servicio, cliente):
+        self.id_servicio = id_servicio
+        self.cliente = cliente
+
+    @abstractmethod
+    def calcular_costo(self):
+        """Método abstracto para polimorfismo"""
+        pass
+
+    def _str_(self):
+        return f"Servicio {self.id_servicio} - Cliente: {self.cliente.nombre}"

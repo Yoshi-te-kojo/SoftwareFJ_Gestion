@@ -1,1 +1,11 @@
 
+2026-05-12 02:51:06,258 | INFO | === INICIO DEL SISTEMA SOFTWARE FJ ===
+2026-05-12 02:51:06,259 | INFO | Cliente registrado: Cliente[C001] - Juan Pérez
+2026-05-12 02:51:06,259 | ERROR | El ID del cliente debe tener al menos 3 caracteres
+2026-05-12 02:51:06,259 | INFO | 3 Servicios creados correctamente
+2026-05-12 02:51:06,259 | INFO | === FIN DEL SISTEMA ===
+2026-05-12 03:32:25,250 | INFO | === INICIO DEL SISTEMA SOFTWARE FJ ===
+2026-05-12 03:32:25,250 | INFO | Cliente registrado: Cliente[C001] - Juan Pérez
+2026-05-12 03:32:25,250 | ERROR | El ID del cliente debe tener al menos 3 caracteres
+2026-05-12 03:32:25,250 | INFO | 3 Servicios creados correctamente
+2026-05-12 03:32:25,251 | INFO | === FIN DEL SISTEMA ===

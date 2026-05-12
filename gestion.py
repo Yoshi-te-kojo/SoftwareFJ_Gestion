@@ -1,6 +1,6 @@
 import logging
 from excepciones import ErrorReserva, ErrorValidacion
-from entidades import Reserva
+from entidades import * 
 
 #Configuración de logging
 logging.basicConfig(
