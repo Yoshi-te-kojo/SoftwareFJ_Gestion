@@ -15,5 +15,3 @@ def log_event(mensaje: str, nivel: str = "info"):
     else:
         logging.info(mensaje)
         print(f"📝 {mensaje}")
-        logging.info(mensaje)
-        print(f"📝 INFO | {mensaje}")
