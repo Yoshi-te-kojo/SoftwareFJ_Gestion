@@ -2,7 +2,7 @@ import logging
 
 # Configuración del sistema de logs
 logging.basicConfig(
-    filename='logs/logs.log',
+    filename='software_fj.logs',
     level=logging.INFO,
     format='%(asctime)s | %(levelname)s | %(message)s',
     encoding='utf-8'
