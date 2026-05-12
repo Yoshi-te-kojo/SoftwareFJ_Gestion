@@ -1,7 +1,6 @@
 import logging
-from datetime import datetime
 
-# Configuración del logger
+# Configuración del sistema de logs
 logging.basicConfig(
     filename='logs/logs.log',
     level=logging.INFO,
@@ -10,15 +9,11 @@ logging.basicConfig(
 )
 
 def log_event(mensaje: str, nivel: str = "info"):
-    """Función para registrar eventos y errores"""
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    
     if nivel == "error":
         logging.error(mensaje)
-        print(f"🔴 ERROR | {mensaje}")
-    elif nivel == "warning":
-        logging.warning(mensaje)
-        print(f"⚠️  WARNING | {mensaje}")
+        print(f"🔴 ERROR: {mensaje}")
     else:
+        logging.info(mensaje)
+        print(f"📝 {mensaje}")
         logging.info(mensaje)
         print(f"📝 INFO | {mensaje}")
